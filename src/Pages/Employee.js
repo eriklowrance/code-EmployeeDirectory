@@ -21,9 +21,12 @@ class Employee extends Component {
     }
 
     sortByName = () => {
-        
-        let { employees, sorted } = this.state
+        let { employees, sorted, searchArray } = this.state
          let sortedArray;
+         if (!searchArray === []) {
+             sortedArray = searchArray;
+
+         }
          if (!sorted) {
              sortedArray = employees.sort(function (a, b) {
                  return a.name.first > b.name.first ? 1: -1
@@ -32,7 +35,7 @@ class Employee extends Component {
              sortedArray = employees.reverse()
          }
          this.setState({
-             employees: sortedArray,
+             searchArray: sortedArray,
              sorted: !sorted
          })}
 

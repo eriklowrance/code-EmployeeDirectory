@@ -3,6 +3,7 @@
   ## Description 
     
 An app that allows a user to view thier entire employee directory and sort or search by name.
+![Image of page](./public/example.png)
   
  
   
